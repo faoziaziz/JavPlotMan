@@ -35,7 +35,7 @@ import org.jzy3d.ui.LookAndFeel;
  * 
  * @author Martin Pernollet
  */
-public class App {
+public class Chart2dDemo {
     public static float duration = 60f;
     /** milisecond distance between two generated samples*/
     public static int interval = 50;
