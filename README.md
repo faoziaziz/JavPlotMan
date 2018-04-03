@@ -1,4 +1,6 @@
 Cara eksekusinya
 
-mvn exec:java -Dexec.mainClass=org.labseni.App
 
+```bash
+mvn exec:java -Dexec.mainClass=org.labseni.App
+```
