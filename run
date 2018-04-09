@@ -1,6 +1,6 @@
 #!/bin/sh
 
-mvn package clean
+mvn dependency:go-offline
 mvn -o install
 mvn exec:java -Dexec.mainClass=org.labseni.App
 

@@ -25,19 +25,9 @@ import org.jzy3d.plot3d.primitives.axes.layout.providers.PitchTickProvider;
 import org.jzy3d.plot3d.primitives.axes.layout.renderers.PitchTickRenderer;
 import org.jzy3d.ui.LookAndFeel;
 
-/**
- * Showing a pair of 2d charts to represent pitch and amplitude variation of an
- * audio signal.
- * 
- * Noticed problems on chart resize. Suspect "wrong stuffs" around miglayout or jogl.
- * 
- * FIXME : use ChartGroup to build interface. Miglayout/JOGL interaction causes problem when downsizing windows
- * 
- * @author Martin Pernollet
- */
+
 public class Chart2dDemo {
     public static float duration = 60f;
-    /** milisecond distance between two generated samples*/
     public static int interval = 50;
     public static int maxfreq = 880;
     public static int nOctave = 5;
@@ -47,7 +37,7 @@ public class Chart2dDemo {
         new TimeChartWindow(log.getCharts());
 
         generateSamplesInTime(log);
-        // generateSamples(log, 500000);
+        
     }
 
     public static void generateSamples(PitchAmpliControlCharts log, int n) throws InterruptedException {
@@ -145,12 +135,7 @@ public class Chart2dDemo {
         public void addChart(Chart chart, int id) {
             Component canvas = (java.awt.Component) chart.getCanvas();
 
-            JPanel chartPanel = new JPanel(new BorderLayout());
-            /*chartPanel.setMaximumSize(null);
-            chartPanel.setMinimumSize(null);
-            canvas.setMinimumSize(null);
-            canvas.setMaximumSize(null);*/
-            
+            JPanel chartPanel = new JPanel(new BorderLayout());         
             Border b = BorderFactory.createLineBorder(java.awt.Color.black);
             chartPanel.setBorder(b);
             chartPanel.add(canvas, BorderLayout.CENTER);

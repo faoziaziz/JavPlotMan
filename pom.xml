@@ -22,13 +22,33 @@
   </repositories>
 
   <dependencies>
+    <!-- https://mvnrepository.com/artifact/org.jfree/jfreechart -->
+    <dependency>
+       <groupId>org.jfree</groupId>
+       <artifactId>jfreechart</artifactId>
+       <version>1.5.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.jfree</groupId>
+      <artifactId>jfreesvg</artifactId>
+      <version>3.3</version>
+    </dependency>
+ 
+    <dependency>
+      <groupId>com.orsonpdf</groupId>
+      <artifactId>orsonpdf</artifactId>
+      <version>1.7</version>
+    </dependency>
+
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
+   
+   <!-- dependency ini susah buat diimplementasikan karena gak ada tutorial -->
     <dependency>
     <groupId>org.jzy3d</groupId>
       <artifactId>jzy3d-api</artifactId>
